@@ -2,3 +2,4 @@ node_modules/
 proxy.py
 out/
 resources/
+.env
