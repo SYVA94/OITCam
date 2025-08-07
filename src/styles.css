@@ -1,0 +1,174 @@
+* {
+    margin:0 !important;
+    padding:0 !important;
+    font-family: Georgia, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #0E1D33;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* To distribute space evenly */
+}
+
+.navbar {
+    margin: 0;
+    background-color: #919191;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    border-radius: 0 0 20px 20px;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    display: flex; /* Add display flex */
+}
+
+.footer {
+    background-color: #919191;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    border-radius: 20px 20px 0 0;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    display: flex; /* Add display flex */
+}
+
+#camera-stream {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px; /* Adjusted as per your need */
+    margin-bottom: 40px; /* Adjusted as per your need */
+}
+
+.camera-stream-img {
+    max-width: 100%;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.multi-stream-img {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.multi-stream-img:hover {
+    background-color: hsl(215.7, 56.9%, 12.7%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(255, 255, 255) 0px 7px 29px 0px;
+}
+
+.multi-stream-img:active {
+    letter-spacing: 2px;
+    background-color: hsl(215.7, 56.9%, 12.7%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(255, 255, 255) 0px 7px 29px 0px;
+    transform: translateY(2px);
+    transition: 100ms;
+}
+
+.multi-view-grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    height: 100% - 60px ! important; /* Adjusted to fit within the viewport */
+
+}
+
+.logo {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+button {
+    padding: 4px !important;
+    border-radius: 2px;
+    cursor: pointer;
+    border: 0;
+    margin: 5px !important;
+    background-color: white;
+    box-shadow: rgb(0, 0, 0) 0px 5px 29px 0px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    background-color: hsl(215.7, 56.9%, 12.7%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(0 46 84) 0px 7px 29px 0px;
+}
+
+button:active {
+    letter-spacing: 2px;
+    background-color: hsl(215.7, 56.9%, 12.7%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(0 46 84) 0px 7px 29px 0px;
+    transform: translateY(2px);
+    transition: 100ms;
+}
+
+.buttonptz {
+    background-color: #E41D3D;
+    color: white;
+    pointer-events: none;
+}
