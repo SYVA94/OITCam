@@ -7,7 +7,7 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish"
+    "publish": "env-cmd electron-forge publish"
   },
   "author": "Shena Yang",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "@electron/remote": "^2.1.3",
     "electron-log": "^5.4.2",
     "electron-squirrel-startup": "^1.0.1",
+    "env-cmd": "^10.1.0",
     "update-electron-app": "^3.1.1"
   }
 }
